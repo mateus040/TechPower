@@ -9,7 +9,7 @@
 </head>
 <body>
     
-    <form method="POST" action="processamento.php">
+    <form method="POST">
         <div class="main-login">
                 <div class="left-login">
                     <img src="images/logo1.png" class="left-login-image">
