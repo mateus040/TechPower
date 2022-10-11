@@ -1,0 +1,45 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: linear-gradient(to right, #5e17eb, #6b29f0);
+    color: white;
+    font-family: arial;
+}
+
+input{
+    display: block;
+    height: 55px;
+    width: 400px;
+    margin: 10px;
+    border-radius: 30px;
+    border: 1px solid black;
+    font-size: 16pt;
+}
+
+::placeholder{
+    padding: 20px 20px;
+}
+
+.corpo-form{
+    width: 420px;
+    margin: 150px auto 0px auto; /* Centralizando */
+}
+
+.corpo-form h1{
+    text-align: center;
+    padding: 20px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+a:hover{
+    text-decoration: underline;
+}
