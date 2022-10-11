@@ -18,7 +18,7 @@
                 <div class="card-login">
                     <h1>LOGIN</h1>
                     <div class="textfield">
-                        <input type="text" name="usuario" placeholder="Usuário">
+                        <input type="email" name="email" placeholder="Email">
                     </div>
                     <div class="textfield">
                         <input type="password" name="senha" placeholder="Senha">
@@ -29,6 +29,10 @@
             </div>
         </div>
     </form>
+
+    <?php
+
+    ?>
 
 </body>
 </html>

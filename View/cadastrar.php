@@ -25,7 +25,7 @@
                             <input type="number" name="telefone" placeholder="Telefone">
                         </div>
                         <div class="textfield">
-                            <input type="text" name="usuario" placeholder="Usuário">
+                            <input type="email" name="email" placeholder="Email">
                         </div>
                         <div class="textfield">
                             <input type="password" name="senha" placeholder="Senha">
