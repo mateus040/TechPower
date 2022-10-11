@@ -14,7 +14,7 @@
     <header class="header">
 
         <a href="#" class="logo">
-            <img src="images/logo1.png" alt="">
+            <img src="images/logo2.png" alt="">
         </a>
 
         <nav class="navbar">
