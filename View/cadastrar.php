@@ -19,19 +19,19 @@
 
                         <h1>CADASTRAR</h1>
                         <div class="textfield">
-                            <input type="text" name="nome" placeholder="Nome Completo">
+                            <input type="text" name="nome" placeholder="Nome Completo" maxlength="30">
                         </div>
                         <div class="textfield">
-                            <input type="number" name="telefone" placeholder="Telefone">
+                            <input type="number" name="telefone" placeholder="Telefone" maxlength="30">
                         </div>
                         <div class="textfield">
-                            <input type="email" name="email" placeholder="Email">
+                            <input type="email" name="email" placeholder="Email" maxlength="40">
                         </div>
                         <div class="textfield">
-                            <input type="password" name="senha" placeholder="Senha">
+                            <input type="password" name="senha" placeholder="Senha" maxlength="15">
                         </div>
                         <div class="textfield">
-                            <input type="password" name="conf_senha" placeholder="Confirmar Senha">
+                            <input type="password" name="confSenha" placeholder="Confirmar Senha">
                         </div>
                         
                         <button type="submit" class="btn-login">Cadastrar</button>
