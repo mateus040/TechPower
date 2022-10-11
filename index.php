@@ -8,6 +8,12 @@ switch($uri_parse)
         include 'home.php';
     break;
 
+    case '/login':
+        include 'login.php';
+    break;
+
+
+    
     default:
         header("Location: /home");
     break;
