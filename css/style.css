@@ -5,7 +5,7 @@
 :root{
     --main-color:#d3ad7f;
     --black:#13131a;
-    --bg:#5e17eb;
+    --bg: black;
     --border:.1rem solid rgba(255,255,255,.3);
 }
 
@@ -20,9 +20,11 @@
     transition: .2s linear;
 }
 
+
+
 html{
     font-size: 62.5%;
-    overflow-x: hidden;
+   /* overflow-x: hidden;*/
     scroll-padding-top: 9rem;
     scroll-behavior: smooth;
 }
@@ -41,7 +43,7 @@ html::-webkit-scrollbar-thumb{
 }
 
 body{
-    background: var(--bg);
+    background: var(--bg)
 }
 
 section{
@@ -77,7 +79,7 @@ section{
 }
 
 .header{
-    background: linear-gradient(to right, #5e17eb, #6b29f0);
+    background: linear-gradient(to right, #9400D3, #8A2BE2);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -89,7 +91,7 @@ section{
 }
 
 .header .logo img{
-    height: 10rem;   
+    height: 8rem;   
 }
 
 
