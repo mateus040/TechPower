@@ -5,11 +5,15 @@ $uri_parse = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 switch($uri_parse)
 {
     case '/home':
-        include 'home.php';
+        include 'View/home.php';
     break;
 
     case '/login':
-        include 'login.php';
+        include 'View/login.php';
+    break;
+
+    case '/cadastrar':
+        include 'View/cadastrar.php';
     break;
 
 
