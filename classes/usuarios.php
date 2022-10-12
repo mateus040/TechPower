@@ -62,6 +62,25 @@ class Usuario
     public function login($email, $senha)
     {
         global $conexao;
+        
+        // Verificar se o email e senha estão cadastrados, se sim
+        $sql = $conexao->prepare("SELECT id_usuario FROM usuarios WHERE email = :e AND senha = :s");
+        $sql->bindValue(":e",$email);
+        $sql->bindValue(":s",$senha);
+        $sql->execute();
+
+        if ($sql->rowCount() > 0)
+        {
+            // Entrar no sistema (sessão)
+            $dado = $sql->apc_fetch(); // Transformando em array
+            session_start();
+            $_SESSION['id_usuario'] = $dado['id_usuario'];
+            return true; // Logado com sucesso
+        }
+        else
+        {
+            return false; // Não foi possível logar
+        }
     }
 }
 
