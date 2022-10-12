@@ -7,19 +7,13 @@ class Usuario
 
     public function __construct()
     {
-        include_once '../sql/MySQL.php';
-
-        $this->conexao = new MySQL();
-    }
-
-
-    /*public function conectar($nome, $host, $usuario, $senha)
-    {
-        global $pdo;
+        global $conexao;
 
         try 
         {
-            $pdo = new PDO("mysql:db_techpower=".$nome.";host=".$host,$usuario,$senha);
+            $dsn = "mysql:host=localhost:3307;dbname=db_techpower";
+
+            $this->conexao = new PDO($dsn, 'root', 'etecjau');
         }
         catch (PDOException $e)
         {
@@ -27,32 +21,47 @@ class Usuario
         }
 
     }
-    */
+    
 
     public function cadastrar($nome, $telefone, $email, $senha)
     {
         global $conexao;
 
         // Verificar se já existe o email cadastrado
-        $sql = $conexao->prepare("SELECT id_usuario FROM usuarios WHERE email = :e");
+        /*$sql = $conexao->prepare("SELECT id_usuario FROM usuarios WHERE email = :e");
 
         $sql->bindValue(":e",$email);
-        $sql->execute();
+        $sql->execute(); */
 
-        if($sql->rowCount() > 0) 
+        $sql = "SELECT id_usuarios FROM usuarios WHERE email = :e";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(":e",$email);
+        $stmt->execute();
+
+        if($stmt->rowCount() > 0) 
         {
-            return false; // Já está cadastrada
+            return false; // Já está cadastrado
         }
         else
         {
             // Caso não, cadastrar
-            $sql = $conexao->prepare("INSERT INTO usuarios (nome, telefone, email, senha) VALUES (:n, :t, :e, :s)");
+            /*$sql = $conexao->prepare("INSERT INTO usuarios (nome, telefone, email, senha) VALUES (:n, :t, :e, :s)");
             $sql->bindValue(":n",$nome);
             $sql->bindValue(":t",$telefone);
             $sql->bindValue(":e",$email);
-            $sql->bindValue(":s",$senha);
+            $sql->bindValue(":s",md5($senha));
             $sql->execute();
-            return true;
+            return true; // Cadastrado com sucesso */
+
+            $sql = "INSERT INTO usuarios (nome, telefone, email, senha) VALUES (:n, :t, :e, :s)";
+            $stmt = $this->conexao->prepare($sql);
+            $stmt->bindValue(":n",$nome);
+            $stmt->bindValue(":t",$telefone);
+            $stmt->bindValue(":e",$email);
+            $stmt->bindValue(":s",md5($senha));
+            $stmt->execute();
+
+
         }
 
 
@@ -64,10 +73,16 @@ class Usuario
         global $conexao;
         
         // Verificar se o email e senha estão cadastrados, se sim
-        $sql = $conexao->prepare("SELECT id_usuario FROM usuarios WHERE email = :e AND senha = :s");
+        /*$sql = $conexao->prepare("SELECT id_usuario FROM usuarios WHERE email = :e AND senha = :s");
         $sql->bindValue(":e",$email);
-        $sql->bindValue(":s",$senha);
-        $sql->execute();
+        $sql->bindValue(":s",md5($senha));
+        $sql->execute();*/
+
+        $sql = "SELECT id_usuarios FROM usuarios WHERE email = :e AND senha = ;s";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(":e",$email);
+        $stmt->bindValue(":s",md5($senha));
+        $stmt->execute();
 
         if ($sql->rowCount() > 0)
         {
