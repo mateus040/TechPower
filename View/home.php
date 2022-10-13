@@ -1,3 +1,15 @@
+<?php
+    session_start();
+    if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true))
+    {
+        unset($_SESSION['email']);
+        unset($_SESSION['senha']);
+        header('Location: /login');
+    }
+    $logado = $_SESSION['email'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -24,7 +36,7 @@
             <a href="#products">Products</a>
             <a href="#review">Review</a>
             <a href="#contatc">Contact</a>
-            <a href="#blogs">Blogs</a>
+            <a href="sair.php">Sair</a>
         </nav>
 
         <div class="icons">
