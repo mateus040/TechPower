@@ -1,8 +1,20 @@
 <?php
-    require_once 'classes/usuarios.php';
-    $u = new Usuario;
-?>
 
+    if(isset($_POST['submit']))
+    {
+        include_once('MySQL.php');
+
+        $nome = $_POST['nome'];
+        $telefone = $_POST['telefone'];
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+        $confSenha = $_POST['confSenha'];
+
+        $result = mysqli_query($conexao, "INSERT INTO usuarios (nome, telefone, email, senha, confSenha) 
+        VALUES ('$nome','$telefone','$email','$senha','$confSenha')");
+    }
+
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -40,59 +52,11 @@
                             <input type="password" name="confSenha" placeholder="Confirmar Senha">
                         </div>
                         
-                        <button type="submit" class="btn-login">Cadastrar</button>
+                        <button type="submit" name="submit" class="btn-login">Cadastrar</button>
                     </div>
                 </div>
         </div>
     </form>
-
-    <?php
-
-        // Verificar se clicou no botão
-        if(isset($_POST['nome'])) 
-        {
-            $nome = addslashes($_POST['nome']);
-            $telefone = addslashes(($_POST['telefone']));
-            $email = addslashes($_POST['email']);
-            $senha = addslashes($_POST['senha']);
-            $confirmarSenha = addslashes($_POST['confSenha']);
-
-            // Verificar se está preechido
-            if(!empty($nome) && !empty($telefone) && !empty($email) && !empty($senha) && !empty($confirmarSenha))
-            {
-                $u->__construct("db_techpower", "localhost:3307", "root", "etecjau");
-
-                if($u->msgErro == "") // Se está tudo OK
-                {
-                    if($senha == $confirmarSenha)
-                    {
-                        if($u->cadastrar($nome,$telefone,$email,$senha))
-                        {
-                            echo "Email já cadastrado!";
-                        }
-                        else
-                        {
-                            echo "Cadastrado com sucesso! Acesse para entrar!";
-                        }
-                    }
-                    else
-                    {
-                        echo "Senha e confirmar senha não correspondem!";
-                    }
-                    
-                }
-                else
-                {
-                    echo "Erro ".$u->msgErro;
-                }
-            }
-            else
-            {
-                echo "Preencha todos os campos!";
-            }
-        }
-
-    ?>
 
 </body>
 </html>
