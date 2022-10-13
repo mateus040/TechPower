@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <form method="POST">
+    <form action="testLogin.php" method="POST">
         <div class="main-login">
             <div class="left-login">
                 <img src="images/logo1.png" class="left-login-image">
@@ -23,16 +23,12 @@
                     <div class="textfield">
                         <input type="password" name="senha" placeholder="Senha">
                     </div>
-                    <button type="submit" class="btn-login">Login</button>
+                    <button type="submit" name="submit" class="btn-login">Login</button>
                     <a href="/cadastrar">Ainda não se cadastrou? <strong> Cadastre-se! </strong> </a>
                 </div>
             </div>
         </div>
     </form>
-
-    <?php
-
-    ?>
 
 </body>
 </html>

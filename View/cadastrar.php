@@ -8,10 +8,12 @@
         $telefone = $_POST['telefone'];
         $email = $_POST['email'];
         $senha = $_POST['senha'];
-        $confSenha = $_POST['confSenha'];
 
-        $result = mysqli_query($conexao, "INSERT INTO usuarios (nome, telefone, email, senha, confSenha) 
-        VALUES ('$nome','$telefone','$email','$senha','$confSenha')");
+        $result = mysqli_query($conexao, "INSERT INTO usuarios (nome, telefone, email, senha) 
+        VALUES ('$nome','$telefone','$email','$senha')");
+
+
+        header("Location: /login");
     }
 
 ?>
@@ -47,9 +49,6 @@
                         </div>
                         <div class="textfield">
                             <input type="password" name="senha" placeholder="Senha" maxlength="15">
-                        </div>
-                        <div class="textfield">
-                            <input type="password" name="confSenha" placeholder="Confirmar Senha">
                         </div>
                         
                         <button type="submit" name="submit" class="btn-login">Cadastrar</button>
