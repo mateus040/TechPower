@@ -1,12 +1,12 @@
 <?php
+
     session_start();
-    if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true))
+
+    if(!isset($_SESSION['id_usuario']))
     {
-        unset($_SESSION['email']);
-        unset($_SESSION['senha']);
-        header('Location: /login');
+        header("Location: /logar");
+        exit;
     }
-    $logado = $_SESSION['email'];
 
 ?>
 

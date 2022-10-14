@@ -1,21 +1,6 @@
 <?php
-
-    if(isset($_POST['submit']))
-    {
-        include_once('MySQL.php');
-
-        $nome = $_POST['nome'];
-        $telefone = $_POST['telefone'];
-        $email = $_POST['email'];
-        $senha = $_POST['senha'];
-
-        $result = mysqli_query($conexao, "INSERT INTO usuarios (nome, telefone, email, senha) 
-        VALUES ('$nome','$telefone','$email','$senha')");
-
-
-        header("Location: /login");
-    }
-
+    require_once 'classes/usuarios.php';
+    $u = new Usuario;
 ?>
 
 <!DOCTYPE html>
@@ -50,12 +35,89 @@
                         <div class="textfield">
                             <input type="password" name="senha" placeholder="Senha" maxlength="15">
                         </div>
+                        <div class="textfield">
+                            <input type="password" name="confSenha" placeholder="Confirmar Senha" maxlength="15">
+                        </div>
                         
                         <button type="submit" name="submit" class="btn-login">Cadastrar</button>
+
+                        <?php
+
+                            // Verificar se clicou no botão
+                            if(isset($_POST['nome']))
+                            {
+                                $nome = addslashes($_POST['nome']);
+                                $telefone = addslashes($_POST['telefone']);
+                                $email = addslashes($_POST['email']);
+                                $senha = addslashes($_POST['senha']);
+                                $confirmarSenha = addslashes($_POST['confSenha']);
+
+                                // Verificar se está preenchido
+                                if(!empty($nome) && !empty($telefone) && !empty($email) && !empty($senha))
+                                {
+                                    $u->conectar("db_techpower","localhost:3307","root","etecjau");
+
+                                    if($u->msgErro == "") // Está tudo ok
+                                    {
+                                        if($senha == $confirmarSenha)
+                                        {
+                                            if($u->cadastrar($nome,$telefone,$email,$senha))
+                                            {
+                                                header("Location: /login");
+                                            }   
+                                            else
+                                            {
+                                                ?>
+
+                                                <div class="msg-erro">
+                                                    Email já cadastrado!
+                                                </div>
+                                                
+                                                <?php
+                                            }
+                                        }
+                                        else
+                                        {
+                                            ?>
+                                            <div class="msg-erro">
+                                                Senha e confirmar senha não correspondem!
+                                            </div>
+
+                                            <?php
+                                        }
+                                        
+                                    }
+                                    else
+                                    {
+                                        ?>
+
+                                        <div class="msg-erro">
+                                            <?php echo "Erro: ".$u->msgErro; ?>
+                                        </div>
+
+                                        <?php
+                                    }
+                                }
+                                else
+                                {
+                                    ?>
+                                    <div class="msg-erro">
+                                        Preencha todos os campos!
+                                    </div>
+
+                                    <?php
+                                }
+
+                            }
+
+                        ?>
+
                     </div>
                 </div>
         </div>
     </form>
+
+
 
 </body>
 </html>
