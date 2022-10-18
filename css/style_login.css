@@ -8,7 +8,7 @@
 body{
     margin: 0;
     font-family: 'Noto Sans', sans-serif;
-    background: linear-gradient(to right, #9400D3, #8A2BE2);
+    background: linear-gradient(to right, #4169E1, #1E90FF);
 }
 
 body * {
@@ -16,7 +16,7 @@ body * {
 }
 
 .main-login{
-    background: linear-gradient(to right, #9400D3, #8A2BE2);
+    background: linear-gradient(to right, #4169E1, #1E90FF);
     display: flex;
     justify-content: center;
     align-items: center;

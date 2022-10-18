@@ -79,7 +79,7 @@ section{
 }
 
 .header{
-    background: linear-gradient(to right, #9400D3, #8A2BE2);
+    background: linear-gradient(to right, #4169E1, #1E90FF);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -220,7 +220,7 @@ section{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background:url(../images/home-img.jpeg) no-repeat;
+    background:url(../images/fundo.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
