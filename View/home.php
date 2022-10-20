@@ -119,48 +119,48 @@
     </section>
 
     <section class="menu" id="menu">
-        <h1 class="heading"> our <span>menu</span> </h1>
+        <h1 class="heading"> destaques </h1>
         <div class="box-container">
             <div class="box">
-                <img src="images/menu-1.png" alt="">
-                <h3>tasty and healty</h3>
-                <div class="price">$15.99 <span>20.99</span></div>
-                <a href="#" class="btn">add to cart</a>
+                <img src="images/mouse.png" alt="">
+                <h3>Mouse Gamer Redragon Cobra, Chroma RGB, Preto - M711 V2</h3>
+                <div class="price">R$116,99 <span>150,00</span></div>
+                <a href="#" class="btn">add carrinho</a>
             </div>
 
             <div class="box">
-                <img src="images/menu-2.png" alt="">
-                <h3>tasty and healty</h3>
-                <div class="price">$15.99 <span>20.99</span></div>
-                <a href="#" class="btn">add to cart</a>
+                <img src="images/amd5600g.jpg" alt="">
+                <h3>Processador AMD Ryzen 5 5600G, 3.9GHz, 6 Núcleos, 12 Threads Vid. Integrado</h3>
+                <div class="price">R$1074,99 <span>2000,00</span></div>
+                <a href="#" class="btn">add carrinho</a>
             </div>
 
             <div class="box">
-                <img src="images/menu-3.png" alt="">
-                <h3>tasty and healty</h3>
-                <div class="price">$15.99 <span>20.99</span></div>
-                <a href="#" class="btn">add to cart</a>
+                <img src="images/rtx2060.jpg" alt="">
+                <h3>Placa de Vídeo Zotac Gaming NVIDIA GeForce RTX 2060, 6GB, GDDR6</h3>
+                <div class="price">R$1499,99 <span>3000,00</span></div>
+                <a href="#" class="btn">add carrinho</a>
             </div>
 
             <div class="box">
-                <img src="images/menu-4.png" alt="">
-                <h3>tasty and healty</h3>
-                <div class="price">$15.99 <span>20.99</span></div>
-                <a href="#" class="btn">add to cart</a>
+                <img src="images/teclado_kumara.jpg" alt="">
+                <h3>Teclado Mecânico Gamer Redragon Kumara, LED Vermelho, Switch Outemu Blue</h3>
+                <div class="price">R$199,99 <span>410.00</span></div>
+                <a href="#" class="btn">add carrinho</a>
             </div>
 
             <div class="box">
-                <img src="images/menu-5.png" alt="">
-                <h3>tasty and healty</h3>
-                <div class="price">$15.99 <span>20.99</span></div>
-                <a href="#" class="btn">add to cart</a>
+                <img src="images/headsetHyperx.jpg" alt="">
+                <h3>Headset Gamer HyperX Cloud Stinger, Drivers 50mm, Múltiplas Plataformas, P2 e P3</h3>
+                <div class="price">R$199,99 <span>385,00</span></div>
+                <a href="#" class="btn">add carrinho</a>
             </div>
 
             <div class="box">
-                <img src="images/menu-6.png" alt="">
-                <h3>tasty and healty</h3>
-                <div class="price">$15.99 <span>20.99</span></div>
-                <a href="#" class="btn">add to cart</a>
+                <img src="images/placaAsus.jpg" alt="">
+                <h3>Placa-Mãe Asus TUF Gaming B450M-Pro II, AMD AM4, mATX, DDR4y</h3>
+                <div class="price">R$849,99 <span>1050,00</span></div>
+                <a href="#" class="btn">add carrinho</a>
             </div>
 
         </div>
