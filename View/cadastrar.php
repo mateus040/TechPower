@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar</title>
     <link rel="stylesheet" href="../css/style_login.css">
+    <link rel="shortcut icon" href="images/icone.ico" type="image/x-icon">
 </head>
 <body>
     
