@@ -42,7 +42,7 @@
 
         <div class="icons">
             <div class="fas fa-search" id="search-btn"></div>
-            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <!-- <div class="fas fa-shopping-cart" id="cart-btn"></div> -->
             <div class="fas fa-bars" id="menu-btn"></div>
         </div>
 
@@ -108,7 +108,7 @@
                 <img src="images/sobre.png" alt="">
             </div>
             <div class="content">
-                <h3>Como surgiu a empresa?</h3>
+                <h3>Sobre a empresa</h3>
                 <p>A empresa TechPower foi oficialmente inaugurada em 2022, o intuito sempre foi disponibilizar o melhor preço
                     em hardware para todos. Buscamos sempre estar a frente trazendo em primeira mão os melhores lançamentos do mercado.
                     Já são mais de 100 mil produtos vendidos por todo o país, e com ótimas avaliações do público geral.
@@ -123,42 +123,42 @@
             <div class="box">
                 <img src="images/mouse.png" alt="">
                 <h3>Mouse Gamer Redragon Cobra, Chroma RGB, Preto - M711 V2</h3>
-                <div class="price">R$116,99 <span>150,00</span></div>
+                <div class="price">R$116,99 <span>R$150,00</span></div>
                 <a href="#" class="btn">Adicionar ao carrinho</a>
             </div>
 
             <div class="box">
                 <img src="images/amd5600g.jpg" alt="">
                 <h3>Processador AMD Ryzen 5 5600G, 3.9GHz, 6 Núcleos, 12 Threads Vid. Integrado</h3>
-                <div class="price">R$1074,99 <span>2000,00</span></div>
+                <div class="price">R$1074,99 <span>R$2000,00</span></div>
                 <a href="#" class="btn">Adicionar ao carrinho</a>
             </div>
 
             <div class="box">
                 <img src="images/rtx2060.jpg" alt="">
                 <h3>Placa de Vídeo Zotac Gaming NVIDIA GeForce RTX 2060, 6GB, GDDR6</h3>
-                <div class="price">R$1499,99 <span>3000,00</span></div>
+                <div class="price">R$1499,99 <span>R$3000,00</span></div>
                 <a href="#" class="btn">Adicionar ao carrinho</a>
             </div>
 
             <div class="box">
                 <img src="images/teclado_kumara.jpg" alt="">
                 <h3>Teclado Mecânico Gamer Redragon Kumara, LED Vermelho, Switch Outemu Blue</h3>
-                <div class="price">R$199,99 <span>410.00</span></div>
+                <div class="price">R$199,99 <span>R$410.00</span></div>
                 <a href="#" class="btn">Adicionar ao carrinho</a>
             </div>
 
             <div class="box">
                 <img src="images/headsetHyperx.jpg" alt="">
                 <h3>Headset Gamer HyperX Cloud Stinger, Drivers 50mm, Múltiplas Plataformas, P2 e P3</h3>
-                <div class="price">R$199,99 <span>385,00</span></div>
+                <div class="price">R$199,99 <span>R$385,00</span></div>
                 <a href="#" class="btn">Adicionar ao carrinho</a>
             </div>
 
             <div class="box">
                 <img src="images/placaAsus.jpg" alt="">
                 <h3>Placa-Mãe Asus TUF Gaming B450M-Pro II, AMD AM4, mATX, DDR4y</h3>
-                <div class="price">R$849,99 <span>1050,00</span></div>
+                <div class="price">R$849,99 <span>R$1050,00</span></div>
                 <a href="#" class="btn">Adicionar ao carrinho</a>
             </div>
 
@@ -279,7 +279,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star"></i>
                 </div>
             </div>
 
@@ -313,11 +313,10 @@
 
     <section class="footer">
         <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
-            <a href="#" class="fab fa-pinterest"></a>
+            <a href="https://www.facebook.com/mateusgabriel.moreno" class="fab fa-facebook-f"></a>
+            <a href="https://twitter.com/mateus_moreno04" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com/mateus_moreno04/" class="fab fa-instagram"></a>
+            <a href="https://www.linkedin.com/in/mateus-gabriel-moreno-585344240/" class="fab fa-linkedin"></a>
         </div>
 
         <div class="credit">TechPower© @2022 // Todos os direitos reservados. Criado por <span>Mateus Gabriel Moreno.</span></div>
