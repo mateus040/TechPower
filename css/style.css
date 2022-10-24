@@ -3,10 +3,10 @@
 
 /* Definindo cores */
 :root{
-    --main-color:#d3ad7f;
+    --main-color:#1E90FF;
     --black:#13131a;
     --bg: black;
-    --border:1rem solid Yellow;
+    --border:1rem solid white;
     --contorno:.1rem solid rgba(255,255,255,.3);
 }
 
@@ -17,7 +17,6 @@
     box-sizing: border-box;
     outline: none;
     border: none;
-    text-transform: capitalize;
     transition: .2s linear;
 }
 
@@ -25,7 +24,6 @@
 
 html{
     font-size: 62.5%;
-   /* overflow-x: hidden;*/
     scroll-padding-top: 9rem;
     scroll-behavior: smooth;
 }
@@ -70,7 +68,7 @@ section{
     padding: .9rem 3rem;
     font-size: 1.7rem;
     color: #fff;
-    background: var(--main-color);
+    background: linear-gradient(to right, #4169E1, #1E90FF);
     cursor: pointer;
     text-decoration: none;
 }
@@ -373,6 +371,12 @@ section{
     font-size: 2.5rem;
 }
 
+.products .box-container .box .content .price span{
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+
 .products .box-container .box .content .price star{
     text-decoration: line-through;
     font-weight: lighter;
@@ -389,6 +393,11 @@ section{
     border: var(--contorno);
     text-align: center;
     padding: 3rem 2rem;
+}
+
+.review .box-container .box img{
+    width: 80px;
+    height: 50px;
 }
 
 .review .box-container .box p{
@@ -463,61 +472,6 @@ section{
     color:#fff;
     text-transform: none;
     background:none;
-}
-
-.blogs .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap:1.5rem;
-}
-
-.blogs .box-container .box{
-    border:var(--contorno);    
-}
-
-.blogs .box-container .box .image{
-    height: 25rem;
-    overflow:hidden;
-    width: 100%;
-}
-
-.blogs .box-container .box .image img{
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-}
-
-.blogs .box-container .box:hover .image img{
-    transform: scale(1.2);
-}
-
-.blogs .box-container .box .content{
-    padding:2rem;
-}
-
-.blogs .box-container .box .content .title{
-    font-size: 2.5rem;
-    line-height: 1.5;
-    color:#fff;
-    text-decoration: none;
-}
-
-.blogs .box-container .box .content .title:hover{
-    color:var(--main-color);
-}
-
-.blogs .box-container .box .content span{
-    color:var(--main-color);
-    display: block;
-    padding-top: 1rem;
-    font-size: 2rem;
-}
-
-.blogs .box-container .box .content p{
-    font-size: 1.6rem;
-    line-height: 1.8;
-    color:#ccc;
-    padding:1rem 0;
 }
 
 .footer{
