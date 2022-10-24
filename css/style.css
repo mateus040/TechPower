@@ -102,8 +102,8 @@ section{
 }
 
 .header .navbar a:hover{
-    color:var(--main-color);
-    border-bottom: .1rem solid var(--main-color);
+    color:black;
+    border-bottom: .1rem solid black;
     padding-bottom: .5rem;
     
 }
@@ -116,7 +116,7 @@ section{
 }
 
 .header .icons div:hover{
-    color:var(--main-color);
+    color:black;
 }
 
 #menu-btn{
